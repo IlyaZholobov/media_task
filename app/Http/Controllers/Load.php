@@ -31,7 +31,7 @@ class Load extends Controller
             $comment->save();
         }
 
-        return redirect()->route("/random_post");
+        return redirect()->action([Load::class, 'getPost']);
     }
 
     function getPost(){
